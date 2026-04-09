@@ -162,10 +162,12 @@ packageTargets.append(contentsOf: [
         exclude: ["exclude"],
         cSettings: [
             .unsafeFlags(["-w"]),
-            .headerSearchPath(".")
+            .headerSearchPath("."),
+            .headerSearchPath("common")
         ],
         cxxSettings: [
-            .headerSearchPath(".")
+            .headerSearchPath("."),
+            .headerSearchPath("common")
         ],
         swiftSettings: [
             .interoperabilityMode(.Cxx)
